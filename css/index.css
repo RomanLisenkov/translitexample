@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin-top: 44px;
+  font-family: IBM Plex Mono;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -3.2px;
+  color: #4520ab;
+}
+.translator {
+  margin-top: 86px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.translator__areaofinput {
+  width: 500px;
+  height: 56px;
+  border: 2px solid black;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.translator__areaofinput__input {
+  font-size: 18px;
+  letter-spacing: -0.9px;
+  margin-left: 21px;
+  width: 100%;
+  border: none;
+  font-family: IBM Plex Mono;
+}
+
+.translator__areaofinput__input:focus {
+  outline: none;
+}
+
+.translator__areaofinput__button {
+  height: 38px;
+  width: 107px;
+  margin-right: 8px;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  font-family: IBM Plex Mono;
+  transition: 0.2s;
+  text-align: center;
+  padding: 5px 12px;
+  letter-spacing: -0.54px;
+
+  border: none;
+}
+
+.translator__areaofinput__button:active {
+  transform: scale(0.9);
+}
+
+.translator__areaofinput__button:hover {
+  cursor: pointer;
+}
+
+.translator__dictionary {
+  margin-top: 60px;
+  min-height: 40px;
+  width: 500px;
+  font-size: 18px;
+
+  font-family: IBM Plex Mono;
+
+  border-radius: 8px;
+
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+.translator__dictionary__rows {
+  width: 100%;
+}
+ol {
+  list-style-type: none;
+  counter-reset: my-counter;
+  background-color: #f0f0f0;
+}
+
+li::before {
+  position: absolute;
+  content: counter(my-counter);
+  counter-increment: my-counter;
+  margin-left: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+li {
+  display: flex;
+  align-items: center;
+
+  border-top: 1px solid black;
+}
+
+li:first-child {
+  border: none;
+}
+
+.translator__dictionary__rows__row {
+  display: flex;
+  height: 40px;
+
+  align-items: center;
+  width: 100%;
+}
+.translator__dictionary__rows__row__initial {
+  position: relative;
+  display: flex;
+  width: 50%;
+
+  height: 100%;
+
+  align-items: center;
+
+  border-right: 1px solid black;
+}
+.translator__dictionary__rows__row__initial__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 76px;
+  white-space: nowrap;
+  margin-left: 49px;
+}
+
+#undeletable {
+  width: 90px;
+}
+
+.hidn {
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  position: absolute;
+  background-color: white;
+  box-shadow: 1px 1px 5px gray;
+  padding: 0 6px 0 6px;
+  max-width: 190px;
+  min-height: 23px;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  border-radius: 8px;
+}
+
+.translator__dictionary__rows__row__result {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+  border-left: 1px solid black;
+  background-color: #d8d8d8;
+}
+
+.translator__dictionary__rows__row__result__text {
+  margin-left: 28px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 76px;
+  white-space: nowrap;
+}
+.translator__dictionary__rows__row__result__button {
+  display: flex;
+  margin-right: 11px;
+  transition: 0.2s;
+}
+.translator__dictionary__rows__row__result__button:active {
+  transform: scale(0.9);
+}
+
+.translator__clearall {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  width: 176px;
+  height: 38px;
+  padding: 6px 10px 8px 10px;
+  font-size: 18px;
+  letter-spacing: -0.9px;
+  background-color: rgba(173, 173, 173, 1);
+  border-radius: 8px;
+  font-family: IBM Plex Mono;
+  justify-content: space-between;
+  transition: 0.2s;
+}
+.translator__clearall:active {
+  transform: scale(0.95);
+}
+
+.translator__clearall:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .title {
+    margin-top: 20px;
+    font-size: 36px;
+  }
+
+  .translator {
+    margin-top: 76px;
+  }
+
+  .translator__areaofinput {
+    width: 328px;
+  }
+
+  .translator__areaofinput__input {
+    font-size: 15px;
+    letter-spacing: -0.75px;
+  }
+
+  .translator__dictionary {
+    margin-top: 50px;
+
+    width: 328px;
+  }
+
+  .translator__dictionary__rows__row__initial__text {
+    margin-left: 37px;
+  }
+
+  .translator__dictionary__rows__row__result__text {
+    margin-left: 16px;
+  }
+
+  .translator__clearall {
+    margin-top: 42px;
+  }
+
+  .hidn {
+    max-width: 110px;
+  }
+}

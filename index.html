@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <script defer src="./index.js"></script>
+    <title>Транслит</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="title">T.R.A.N.S.L.I.T.</div>
+      </header>
+      <main>
+        <div class="translator">
+          <div class="translator__areaofinput">
+            <input
+              class="translator__areaofinput__input"
+              type="text"
+              name=""
+              id=""
+              placeholder="Начните вводить текст"
+            />
+            <button class="translator__areaofinput__button">Добавить</button>
+          </div>
+
+          <div class="translator__dictionary">
+            <ol class="translator__dictionary__rows">
+              <li id="privet">
+                <div class="translator__dictionary__rows__row">
+                  <div class="translator__dictionary__rows__row__initial">
+                    <div
+                      id="undeletable"
+                      class="translator__dictionary__rows__row__initial__text"
+                    >
+                      Привет👋🏻
+                    </div>
+                  </div>
+
+                  <div class="translator__dictionary__rows__row__result">
+                    <div
+                      class="translator__dictionary__rows__row__result__text"
+                    >
+                      Privet
+                    </div>
+                    <div
+                      class="translator__dictionary__rows__row__result__button"
+                    >
+                      <img src="./icons/deleticon.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+          <div class="translator__clearall">
+            <img src="./icons/deleticon.svg" alt="" /> Очистить всё
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
